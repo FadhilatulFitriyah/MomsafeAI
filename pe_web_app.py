@@ -31,7 +31,6 @@ warnings.filterwarnings('ignore')
 # Mengkoneksikan dengan database spreadsheet
 conn = st.connection("gsheets", type=GSheetsConnection)
 existing_data = conn.read(
-    spreadsheet="https://docs.google.com/spreadsheets/d/1T68SxQb9oWVJ6T05vg981FTiEqOQhE_tPWFDp9xHeqo/edit?gid=249658201#gid=249658201",
     worksheet="DB_PE", 
     ttl=60,
     usecols=list(range(17)))
